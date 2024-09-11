@@ -41,6 +41,66 @@ The dataset for this project was sourced from [Kaggle's Titanic: Machine Learnin
 
 - **Data Preparation**:
   - The dataset was scaled and split into training and testing sets to prepare it for modeling.
+
+
+- **Feature Selection**:
+  - The dataset was cleaned by removing irrelevant columns and the target variable.
+  - Features used in the model:
+    - `Pclass`
+    - `Age`
+    - `SibSp`
+    - `Parch`
+    - `Fare`
+  
+  The following columns were dropped:
+  - `survived` (target variable)
+  - `sex`, `ticket`, `embarked`, `name` (considered irrelevant or categorical variables that were not encoded)
+
+- **Feature Matrix and Target Variable**:
+  - `X`: Features matrix, excluding the target variable and unnecessary columns.
+  - `y`: Target variable, which represents the survival status of the passengers.
+
+```python
+X = titanic_train_df.drop(columns=["survived", "sex", "ticket", "embarked", "name"]).values
+y = titanic_train_df["survived"].values
+```
+
+- **Data Scaling**:
+  - A `StandardScaler` was applied to scale the features, ensuring that the model converges more quickly and accurately during training.
+
+```python
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+```
+
+### Model Architecture
+
+- **Deep Learning Model**:
+  - A sequential deep learning model was constructed using TensorFlow/Keras.
+  - The model architecture includes:
+    - **Input Layer**: Takes in the scaled features with an input shape corresponding to the number of selected features.
+    - **Hidden Layer**: A fully connected layer with 16 units and a ReLU activation function.
+    - **Output Layer**: A single unit with a tanh activation function to predict survival probability.
+
+```python
+nn_model = tf.keras.models.Sequential([
+    tf.keras.layers.Dense(units=16, activation="relu", input_shape=(X_train_scaled.shape[1],)),
+    tf.keras.layers.Dense(units=1, activation="tanh")
+])
+```
+
+### Next Steps
+
+- **Model Training**:
+  - The model should be compiled with an appropriate optimizer and loss function.
+  - Train the model using the scaled feature set and target variable.
+
+- **Evaluation**:
+  - After training, the model’s performance should be evaluated on the test set to measure its accuracy and other relevant metrics.
+
+---
+
+
   
 - **Model Development**:
   - We defined and trained a RandomForest model as our baseline machine learning model.
