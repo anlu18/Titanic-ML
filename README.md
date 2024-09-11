@@ -152,7 +152,7 @@ By following these steps, you will be able to interact with the Titanic Survival
 
 ---
 
-This section seamlessly integrates into your existing README, providing clear instructions on how to access, run, and interact with the Streamlit app.
+
 ## Conclusion
 
 Through this project, we successfully developed machine learning models capable of predicting the survival chances of Titanic passengers with reasonable accuracy. The combination of data cleaning, feature engineering, and model tuning played a crucial role in achieving these results.
