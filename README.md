@@ -109,6 +109,50 @@ nn_model = tf.keras.models.Sequential([
 - **Model Evaluation**:
   - Both models were evaluated on the test dataset to measure their performance and accuracy.
 
+Certainly! Here's how you can incorporate the instructions for accessing and running the Streamlit app into your README:
+
+---
+
+## Accessing and Running the Streamlit App
+
+To visualize and interact with the Titanic Survival Prediction model, we've developed a Streamlit app. Follow the steps below to get started:
+
+### Step 1: Prepare Your Environment
+
+1. **Run the Jupyter Notebook**:
+   - Begin by running the Jupyter notebook named `Just_Keep_Swimming_Nemo.ipynb` to ensure that the data processing and model are set up correctly.
+   - May encounter errors related to missing or outdated libraries.
+
+2. **Install Required Libraries**:
+   - Make sure the following libraries are up to date or installed. Open Git Bash (or your preferred terminal) and run:
+     ```bash
+     pip install streamlit keras tensorflow scikit-learn
+     ```
+
+### Step 2: Run the Streamlit App
+
+1. **Navigate to the App Directory**:
+   - Open Anaconda PowerShell and navigate to the directory containing your `app.py` file.
+
+2. **Start the App**:
+   - Run the following command to start the Streamlit app:
+     ```bash
+     streamlit run app.py
+     ```
+
+### Step 3: Using the App
+
+- Once the app is running, adjust the parameters (such as age, fare, class, etc.) using the sliders and text inputs provided in the app interface.
+- **Prediction**:
+  - After setting the parameters, click on the "Predict" button to see whether the selected passenger would have survived or perished on the Titanic.
+- **Troubleshooting**:
+  - If  a "pop" error or any other issues, simply refresh the page to resolve it.
+
+By following these steps, you will be able to interact with the Titanic Survival Prediction model directly from your browser using the Streamlit app.
+
+---
+
+This section seamlessly integrates into your existing README, providing clear instructions on how to access, run, and interact with the Streamlit app.
 ## Conclusion
 
 Through this project, we successfully developed machine learning models capable of predicting the survival chances of Titanic passengers with reasonable accuracy. The combination of data cleaning, feature engineering, and model tuning played a crucial role in achieving these results.
