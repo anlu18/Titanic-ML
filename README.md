@@ -147,6 +147,7 @@ To visualize and interact with the Titanic Survival Prediction model, we've deve
   - After setting the parameters, click on the "Predict" button to see whether the selected passenger would have survived or perished on the Titanic.
 - **Troubleshooting**:
   - If  a "pop" error or any other issues, simply refresh the page to resolve it.
+  - Mac Users will not be able to run the app.
 
 By following these steps, you will be able to interact with the Titanic Survival Prediction model directly from your browser using the Streamlit app.
 
